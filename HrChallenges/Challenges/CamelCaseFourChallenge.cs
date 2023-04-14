@@ -6,10 +6,10 @@ internal class CamelCaseFourChallenge : IChallenge
 {
     public void StartChallengeConsole()
     {
-        Console.WriteLine(ChallengeSelectorConstant.HeaderPlusMinus);
+        Console.WriteLine(ChallengeSelectorConstant.HeaderCamelCase);
         var sr = new StreamReader(Console.OpenStandardInput());
         var inputs = sr.ReadToEnd().Split("\r\n").Where(x => x != "").ToList();
- 
+         
         ProcessAllStrings(inputs);
     }
 
