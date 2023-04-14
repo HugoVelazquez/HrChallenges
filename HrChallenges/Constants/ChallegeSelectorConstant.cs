@@ -8,6 +8,8 @@ internal static class ChallengeSelectorConstant
     public const string HeaderTimeConversion = "Enter a string with the next format hh:mm:sstt enter: ";
     public const string HeaderBreakingRecords = "Enter an array of n Numbers (Scores) separated with a space and press enter: ";
     public const string HeaderCamelCase = "Enter a List of lines with the next format: C;C;this is a test or S;M;thisIsATest() And then press ";
+    public const string HeaderDivisibleNumPairsNK = "Enter an array of 2 Numbers [n k] separated with a space and press enter:";
+    public const string HeaderDivisibleNumPairsAr = "Enter an array of n Numbers separated with a space and press enter:";
 
     public const string ValidationError = "The value entered is not correct. Try again.";
 }
