@@ -4,7 +4,7 @@ internal class PlusMinusChallenge : IChallenge
 {
     public void StartChallengeConsole()
     {
-        Console.WriteLine(ChallegeSelectorConstant.HeaderPlusMinus);
+        Console.WriteLine(ChallengeSelectorConstant.HeaderPlusMinus);
         List<int> ints = ValueReader.GetIntValuesFromString();
 
         PlusMunis(ints);

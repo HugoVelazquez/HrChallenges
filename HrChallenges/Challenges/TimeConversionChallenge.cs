@@ -4,7 +4,7 @@ internal class TimeConversionChallenge : IChallenge
 {
     public void StartChallengeConsole()
     {
-        Console.WriteLine(ChallegeSelectorConstant.HeaderTimeConversion);
+        Console.WriteLine(ChallengeSelectorConstant.HeaderTimeConversion);
         string s = Console.ReadLine()!;
         TimeConversion(s);
     }
