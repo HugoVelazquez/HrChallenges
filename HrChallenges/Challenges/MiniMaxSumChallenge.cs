@@ -4,7 +4,7 @@ internal class MiniMaxSumChallenge : IChallenge
 {
     public void StartChallengeConsole()
     {
-        Console.WriteLine(ChallegeSelectorConstant.HeaderMinMax);
+        Console.WriteLine(ChallengeSelectorConstant.HeaderMinMax);
         List<int> ints = ValueReader.GetIntValuesFromString();
         MiniMax(ints);
     }

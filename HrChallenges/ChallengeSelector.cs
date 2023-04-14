@@ -39,7 +39,7 @@ internal static class ChallengeSelector
 
     private static void PrintChallenges(List<string> challenges)
     {
-        Console.WriteLine(ChallegeSelectorConstant.HeaderMessage);
+        Console.WriteLine(ChallengeSelectorConstant.HeaderMessage);
 
         int i = 0;
 
