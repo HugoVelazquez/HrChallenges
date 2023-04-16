@@ -10,4 +10,17 @@ internal static class ValueReader
 
         return arr;
     }
+
+    public static List<string> GetListNStrings(int n)
+    {
+        List<string> queries = new List<string>();
+
+        for (int i = 0; i < n; i++)
+        {
+            string queriesItem = Console.ReadLine()!;
+            queries.Add(queriesItem);
+        }
+
+        return queries;
+    }
 }
