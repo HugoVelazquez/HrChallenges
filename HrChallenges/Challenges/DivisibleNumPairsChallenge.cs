@@ -10,7 +10,7 @@ internal class DivisibleNumPairsChallenge : IChallenge
         int n = Convert.ToInt32(firstMultipleInput[0]);
         int k = Convert.ToInt32(firstMultipleInput[1]);
 
-        Console.WriteLine(ChallengeSelectorConstant.HeaderDivisibleNumPairsAr);
+        Console.WriteLine(ChallengeSelectorConstant.HeaderInsertArrayNNumbers);
         List<int> list = ValueReader.GetIntValuesFromString();
 
         Console.WriteLine(DivisibleSumPairs(n, k, list));
