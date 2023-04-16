@@ -4,7 +4,7 @@ internal class BreakingRecordsChallenge : IChallenge
 {
     public void StartChallengeConsole()
     {
-        Console.WriteLine(ChallengeSelectorConstant.HeaderBreakingRecords);
+        Console.WriteLine(ChallengeSelectorConstant.HeaderInsertArrayNNumbers);
         List<int> scores = ValueReader.GetIntValuesFromString();
 
         BreakingRecords(scores);
