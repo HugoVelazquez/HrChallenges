@@ -2,7 +2,7 @@
 {
     internal class OrderListNumbersChallenge : IChallenge
     {
-        public List<int>? OrderedList { get; set; } 
+        public List<int>? OrderedList { get; set; }
         public void StartChallengeConsole()
         {
             Console.WriteLine(ChallengeSelectorConstant.HeaderInsertArrayNNumbers);
@@ -13,34 +13,31 @@
 
         private List<int> OrderListNumbers(List<int> ints)
         {
-            List<int> orderedNumbers = new();
+            List<int> orderedNumbers = new() { ints[0] };
             int indexToInsert;
             int ValueToInsert;
+            int orderedCurrentCount;
 
             for (int i = 0; i < ints.Count; i++)
             {
-                if(orderedNumbers.Count == 0)
-                    orderedNumbers.Add(ints[i]);
-                else 
+                indexToInsert = -1;
+                ValueToInsert = 0;
+                orderedCurrentCount = orderedNumbers.Count;
+                for (int j = 0; j < orderedCurrentCount; j++)
                 {
-                    indexToInsert = -1;
-                    ValueToInsert = 0;
-                    for (int j = 0; j < orderedNumbers.Count; j++)
+                    if (ints[i] < orderedNumbers[j])
                     {
-                        if (ints[i] < orderedNumbers[j])
-                        {
-                            indexToInsert = j;
-                            ValueToInsert = ints[i];
-                            break;
-                        }
-                        ValueToInsert = j == (orderedNumbers.Count - 1) ? ints[i] : ValueToInsert;
+                        indexToInsert = j;
+                        ValueToInsert = ints[i];
+                        break;
                     }
-
-                    if (indexToInsert > -1)
-                        orderedNumbers.Insert(indexToInsert, ValueToInsert);
-                    else
-                        orderedNumbers.Add(ints[i]);
+                    ValueToInsert = j == (orderedCurrentCount - 1) ? ints[i] : ValueToInsert;
                 }
+
+                if (indexToInsert > -1)
+                    orderedNumbers.Insert(indexToInsert, ValueToInsert);
+                else
+                    orderedNumbers.Add(ints[i]);
             }
 
             return orderedNumbers;
