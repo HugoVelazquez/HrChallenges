@@ -32,7 +32,7 @@ internal class BreakingRecordsChallenge : IChallenge
 
         Console.WriteLine("{0} {1}", max, min);
 
-        return new List<int>() {max, min};
+        return new List<int>() { max, min };
     }
 
     public void Validation()

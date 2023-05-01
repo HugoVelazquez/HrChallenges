@@ -9,7 +9,7 @@ internal class CamelCaseFourChallenge : IChallenge
         Console.WriteLine(ChallengeSelectorConstant.HeaderCamelCase);
         var sr = new StreamReader(Console.OpenStandardInput());
         var inputs = sr.ReadToEnd().Split("\r\n").Where(x => x != "").ToList();
-         
+
         ProcessAllStrings(inputs);
     }
 
@@ -17,7 +17,7 @@ internal class CamelCaseFourChallenge : IChallenge
     {
         foreach (var item in strings)
         {
-             Console.WriteLine(CamelCaseFour(item));
+            Console.WriteLine(CamelCaseFour(item));
         }
     }
 
@@ -46,7 +46,7 @@ internal class CamelCaseFourChallenge : IChallenge
                     {
                         builder.Append(list[2].Substring(i, 1).ToUpper());
                     }
-                    else 
+                    else
                     {
                         builder.Append(list[2].Substring(i, 1).ToLower());
                     }

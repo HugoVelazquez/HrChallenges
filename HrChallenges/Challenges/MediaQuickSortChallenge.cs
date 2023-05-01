@@ -7,13 +7,13 @@
             Console.WriteLine(ChallengeSelectorConstant.HeaderInsertArrayNNumbers);
             List<int> arr = ValueReader.GetIntValuesFromString();
 
-            QuickSort(arr, 0 , arr.Count - 1);
+            QuickSort(arr, 0, arr.Count - 1);
 
             ValuePrinter.PrintArryOneLine(arr);
 
             var result = GetMedia(arr);
 
-            Console.WriteLine(string.Format("{0:0.0}",result));
+            Console.WriteLine(string.Format("{0:0.0}", result));
         }
 
         private void QuickSort(List<int> ints, int low, int max)
@@ -58,13 +58,13 @@
             int position;
             int result;
 
-            if(count % 2 == 0)
-            { 
-                position =  count / 2;
-                result =(arr[position] + arr[position - 1]) / 2;
+            if (count % 2 == 0)
+            {
+                position = count / 2;
+                result = (arr[position] + arr[position - 1]) / 2;
             }
             else
-            { 
+            {
                 position = (count - 1) / 2;
                 result = arr[position];
             }

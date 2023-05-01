@@ -7,7 +7,7 @@
             Console.WriteLine(ChallengeSelectorConstant.HeaderInsertArrayNNumbers);
             List<int> ints = ValueReader.GetIntValuesFromString();
 
-             var result = Lonelyinteger(ints, ints.Count);
+            var result = Lonelyinteger(ints, ints.Count);
 
             Console.WriteLine(result);
 

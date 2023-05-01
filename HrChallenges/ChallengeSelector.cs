@@ -25,7 +25,7 @@ internal static class ChallengeSelector
             wasError = true;
 
         } while (challengeOption <= 0 || challengeOption > challenges.Count);
-        
+
 
         Type[] types = Assembly.GetExecutingAssembly().GetTypes();
         Type type = types.SingleOrDefault(t => t.Name == challenges[challengeOption - 1] && typeof(IChallenge).IsAssignableFrom(t))!;

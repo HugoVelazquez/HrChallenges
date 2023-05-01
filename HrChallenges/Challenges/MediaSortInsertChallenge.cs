@@ -13,7 +13,7 @@
 
             var result = GetMedia(arr);
 
-            Console.WriteLine(string.Format("{0:0.0}",result));
+            Console.WriteLine(string.Format("{0:0.0}", result));
         }
 
         private void SortInsert(List<int> arr)
@@ -39,13 +39,13 @@
             int position;
             int result;
 
-            if(count % 2 == 0)
-            { 
-                position =  count / 2;
-                result =(arr[position] + arr[position - 1]) / 2;
+            if (count % 2 == 0)
+            {
+                position = count / 2;
+                result = (arr[position] + arr[position - 1]) / 2;
             }
             else
-            { 
+            {
                 position = (count - 1) / 2;
                 result = arr[position];
             }
