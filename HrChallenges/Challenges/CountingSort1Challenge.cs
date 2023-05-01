@@ -17,7 +17,7 @@
             foreach (var item in arr)
             {
                 counting[item]++;
-            } 
+            }
 
             return counting.ToList();
         }

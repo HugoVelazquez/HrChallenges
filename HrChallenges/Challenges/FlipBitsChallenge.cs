@@ -7,7 +7,7 @@
             Console.WriteLine(ChallengeSelectorConstant.HeaderArraySize);
             int.TryParse(Console.ReadLine(), out int q);
 
-            for(int i = 0; i < q; i++)
+            for (int i = 0; i < q; i++)
             {
                 long n = Convert.ToInt64(Console.ReadLine()!.Trim());
                 long result = flippingBits(n);
