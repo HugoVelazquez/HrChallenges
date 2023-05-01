@@ -23,15 +23,15 @@
             }
         }
 
-        private int partition(List<int> ints, int low, int max) 
+        private int partition(List<int> ints, int low, int max)
         {
             int pivot = ints[max];
 
             int i = low - 1;
 
-            for (int j = low; j <= max -1; j++)
+            for (int j = low; j <= max - 1; j++)
             {
-                if (ints[j] < pivot )
+                if (ints[j] < pivot)
                 {
                     i++;
                     ChangePositon(ints, i, j);
