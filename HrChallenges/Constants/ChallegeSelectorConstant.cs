@@ -9,6 +9,7 @@ internal static class ChallengeSelectorConstant
     public const string HeaderDivisibleNumPairsNK = "Enter an array of 2 Numbers [n k] separated with a space and press enter:";
     public const string HeaderInsertArrayNNumbers = "Enter an array of n Numbers separated with a space and press enter: ";
     public const string HeaderArraySize = "Enter the size of array: ";
+    public const string HeaderTreeLevelOrder = "Type on of the following options: 1: Recursion, 2: Queue";
 
 
     public const string ValidationError = "The value entered is not correct. Try again.";
