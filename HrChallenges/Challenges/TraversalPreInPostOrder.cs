@@ -29,6 +29,7 @@ internal class TraversalPreInPostOrder() : IChallenge
     		break;
 
     		case INORDER:
+                InorderRecursive(root, result);
     		break;
 
     		case POSTORDER:
@@ -51,6 +52,20 @@ internal class TraversalPreInPostOrder() : IChallenge
     	if(root.right != null)
     		PreorderRecursive(root.right, result);
 
+    }
+
+    public void InorderRecursive(Node root, List<int> result)
+    {
+        if(root == null)
+            return;
+
+        if(root.left != null)
+            InorderRecursive(root.left, result);
+
+        result.Add(root.data);
+
+        if(root.right != null)
+            InorderRecursive(root.right, result);
     }
 
     public void Validation()
