@@ -4,13 +4,13 @@ namespace HrChallenges.cmd.Challenges;
 
 internal class TraversalPreInPostOrder() : IChallenge
 {
-	private const int PREORDER = 1;
-	private const int INORDER = 2;
-	private const int POSTORDER = 3;
+    private const int PREORDER = 1;
+    private const int INORDER = 2;
+    private const int POSTORDER = 3;
 
-	public void StartChallengeConsole()
+    public void StartChallengeConsole()
     {
-    	Console.WriteLine(ChallengeSelectorConstant.HeaderTreeOrder);
+        Console.WriteLine(ChallengeSelectorConstant.HeaderTreeOrder);
         int.TryParse(Console.ReadLine()!, out int selectedOption);
 
         Node root = new();
@@ -20,52 +20,67 @@ internal class TraversalPreInPostOrder() : IChallenge
 
     public void ProcessTree(Node root, int selectedOption)
     {
-    	List<int> result = new();
+        List<int> result = new();
 
-    	switch(selectedOption)
-    	{
-    		case PREORDER:
-    			PreorderRecursive(root, result);
-    		break;
+        switch (selectedOption)
+        {
+            case PREORDER:
+                PreorderRecursive(root, result);
+                break;
 
-    		case INORDER:
+            case INORDER:
                 InorderRecursive(root, result);
-    		break;
+                break;
 
-    		case POSTORDER:
-    		break;
-    	}
+            case POSTORDER:
+                PostorderRecursive(root, result);
+                break;
+        }
 
-    	Console.WriteLine(Tree.PrintTreeArray(result, new StringBuilder()));
+        Console.WriteLine(Tree.PrintTreeArray(result, new StringBuilder()));
     }
 
-    public void	PreorderRecursive(Node root, List<int> result)
+    public void PreorderRecursive(Node root, List<int> result)
     {
-    	if(root == null)
-    		return;
+        if (root == null)
+            return;
 
-    	result.Add(root.data);
+        result.Add(root.data);
 
-    	if(root.left != null)
-    		PreorderRecursive(root.left, result);
+        if (root.left != null)
+            PreorderRecursive(root.left, result);
 
-    	if(root.right != null)
-    		PreorderRecursive(root.right, result);
+        if (root.right != null)
+            PreorderRecursive(root.right, result);
 
     }
 
     public void InorderRecursive(Node root, List<int> result)
     {
-        if(root == null)
+        if (root == null)
             return;
 
-        if(root.left != null)
+        if (root.left != null)
             InorderRecursive(root.left, result);
 
         result.Add(root.data);
 
-        if(root.right != null)
+        if (root.right != null)
             InorderRecursive(root.right, result);
+    }
+
+    public void PostorderRecursive(Node root, List<int> result)
+    {
+        if (root == null)
+            return;
+
+        if (root.left != null)
+            PostorderRecursive(root.left, result);
+
+        if (root.right != null)
+            PostorderRecursive(root.right, result);
+
+        result.Add(root.data);
     }
 
     public void Validation()

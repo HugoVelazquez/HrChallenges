@@ -9,7 +9,7 @@ internal static class Tree
         foreach (List<int> level in result)
         {
             sb.Append("[");
-            
+
             PrintTreeArray(level, sb);
 
             sb.Append("]");
@@ -22,10 +22,10 @@ internal static class Tree
 
     public static string PrintTreeArray(List<int> result, StringBuilder sb)
     {
-        foreach(int value in result)
+        foreach (int value in result)
         {
             sb.Append(value);
-            if(value != result.Last())
+            if (value != result.Last())
                 sb.Append(", ");
         }
 
