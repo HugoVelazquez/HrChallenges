@@ -35,7 +35,7 @@ internal class TraversalLevelOrder : IChallenge
                 break;
         }
 
-        PrintTreeArray(result);
+        Console.WriteLine(Tree.PrintTreeArray(result, new StringBuilder()));
     }
 
     public void LevelOrderRecursion(Node root, int level, List<List<int>> result)
@@ -82,29 +82,6 @@ internal class TraversalLevelOrder : IChallenge
             }
             level++;
         }
-    }
-
-    public void PrintTreeArray(List<List<int>> result)
-    {
-        StringBuilder sb = new StringBuilder();
-
-        foreach (List<int> level in result)
-        {
-            sb.Append("[");
-            foreach (int value in level)
-            {
-                sb.Append(value);
-                if (value != level.Last())
-                    sb.Append(", ");
-            }
-
-            sb.Append("]");
-            if (level != result.Last())
-                sb.Append(", ");
-        }
-
-
-        Console.WriteLine(sb.ToString());
     }
 
     public void Validation()
