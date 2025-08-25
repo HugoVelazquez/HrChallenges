@@ -11,6 +11,7 @@ internal static class ChallengeSelectorConstant
     public const string HeaderArraySize = "Enter the size of array: ";
     public const string HeaderTreeLevelOrder = "Type on of the following options: 1: Recursion, 2: Queue";
     public const string HeaderTreeOrder = "Type on of the following options: 1: Preorder, 2: Inorder, 3: PostOrder";
+    public const string HeaderAlphanumericNoSpaces = "Enter a alphanumeric string and then press enter";
 
 
     public const string ValidationError = "The value entered is not correct. Try again.";
