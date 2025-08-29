@@ -9,11 +9,13 @@
             List<int> ints = ValueReader.GetIntValuesFromString();
 
             OrderedList = OrderListNumbers(ints);
+
+            ValuePrinter.PrintArryOneLine(OrderedList);
         }
 
         private List<int> OrderListNumbers(List<int> ints)
         {
-            List<int> orderedNumbers = new() { ints[0] };
+            List<int> orderedNumbers = new();
             int indexToInsert;
             int ValueToInsert;
             int orderedCurrentCount;
