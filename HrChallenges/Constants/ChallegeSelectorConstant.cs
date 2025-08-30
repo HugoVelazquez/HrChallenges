@@ -14,6 +14,8 @@ internal static class ChallengeSelectorConstant
     public const string HeaderAlphanumericNoSpaces = "Enter a alphanumeric string and then press enter";
     public const string HeaderValueToSearch = "Enter a number and press enter";
 
+    public const string SinglyNodeIterative = "Type on of the following options: 1: Iterative, 2: Recursively";
+
 
     public const string ValidationError = "The value entered is not correct. Try again.";
 }
