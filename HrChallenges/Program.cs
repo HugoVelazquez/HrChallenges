@@ -1,3 +1,3 @@
 ﻿using HrChallenges.cmd;
 
-ChallengeSelector.GetChallenge();
+ChallengeSelector.GetChallenges();

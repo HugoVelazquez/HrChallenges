@@ -1,4 +1,4 @@
-﻿namespace HrChallenges.cmd.Challenges;
+﻿namespace HrChallenges.cmd.Challenges.TwoPointersProblems;
 
 internal class TwoSumChallenge : IChallenge
 {

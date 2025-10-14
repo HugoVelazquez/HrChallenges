@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace HrChallenges.cmd.Challenges;
+namespace HrChallenges.cmd.Challenges.NoGroup;
 
 internal class SparseArraysChallenge : IChallenge
 {
