@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace HrChallenges.cmd.Challenges;
+namespace HrChallenges.cmd.Challenges.NoGroup;
 
 internal class TraversalPreInPostOrder() : IChallenge
 {

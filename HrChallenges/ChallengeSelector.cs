@@ -4,10 +4,20 @@ namespace HrChallenges.cmd;
 
 internal static class ChallengeSelector
 {
-    public static void GetChallenge()
+    public static void GetChallenges()
     {
-        List<string> challenges = ChallengeReader.GetChallengesName();
+        List<string> paths = ChallengeReader.GetChallengesPath();
+        int selectedPath = SelectedElement(paths);
 
+        List<string> challenges = ChallengeReader.GetChallengesName(paths[selectedPath - 1]);
+
+        int selectedChallenge = SelectedElement(challenges);
+
+        StartChallenge(challenges[selectedChallenge - 1]);
+    }
+
+    public static int SelectedElement(List<string> elements)
+    {
         int challengeOption = 0;
         bool wasError = false;
 
@@ -18,17 +28,21 @@ internal static class ChallengeSelector
             if (wasError)
                 Console.WriteLine("Invalid selection. Please enter a valid option");
 
-            PrintChallenges(challenges);
+            PrintElements(elements);
 
             int.TryParse(Console.ReadLine(), out challengeOption);
 
             wasError = true;
 
-        } while (challengeOption <= 0 || challengeOption > challenges.Count);
+        } while (challengeOption <= 0 || challengeOption > elements.Count);
 
+        return challengeOption;
+    }
 
+    public static void StartChallenge(string challengeName)
+    {
         Type[] types = Assembly.GetExecutingAssembly().GetTypes();
-        Type type = types.SingleOrDefault(t => t.Name == challenges[challengeOption - 1] && typeof(IChallenge).IsAssignableFrom(t))!;
+        Type type = types.SingleOrDefault(t => t.Name == challengeName && typeof(IChallenge).IsAssignableFrom(t))!;
 
         IChallenge challenge = (IChallenge)Activator.CreateInstance(type)!;
 
@@ -37,7 +51,7 @@ internal static class ChallengeSelector
         challenge.StartChallengeConsole();
     }
 
-    private static void PrintChallenges(List<string> challenges)
+    private static void PrintElements(List<string> challenges)
     {
         Console.WriteLine(ChallengeSelectorConstant.HeaderMessage);
 

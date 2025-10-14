@@ -1,4 +1,4 @@
-﻿namespace HrChallenges.cmd.Challenges
+﻿namespace HrChallenges.cmd.Challenges.NoGroup
 {
     internal class OrderListNumbersChallenge : IChallenge
     {
@@ -33,7 +33,7 @@
                         ValueToInsert = ints[i];
                         break;
                     }
-                    ValueToInsert = j == (orderedCurrentCount - 1) ? ints[i] : ValueToInsert;
+                    ValueToInsert = j == orderedCurrentCount - 1 ? ints[i] : ValueToInsert;
                 }
 
                 if (indexToInsert > -1)
